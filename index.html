@@ -55,6 +55,62 @@
     margin-top: 0;
   }
 }
+
+/* Give the personal opening and research equal weight */
+.interests .reading-column {
+  font-family: var(--serif);
+  font-size: 20px;
+  line-height: 1.75;
+  color: var(--ink);
+}
+
+.interests .perspectives-intro {
+  margin-top: 28px;
+  margin-bottom: 22px;
+}
+
+.interests strong {
+  font-weight: 700;
+}
+
+/* Two perspectives with hand-drawn circle bullets */
+.research-perspectives {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.research-perspectives li {
+  position: relative;
+  padding-left: 30px;
+}
+
+.research-perspectives li + li {
+  margin-top: 28px;
+}
+
+.research-perspectives li::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 10px;
+  width: 12px;
+  height: 13px;
+  border: 1.5px solid var(--accent);
+  border-radius: 43% 57% 48% 52%;
+  transform: rotate(-15deg);
+}
+
+.research-perspectives h3 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.research-perspectives p {
+  margin-bottom: 0;
+}
 </style>
   
   <script type="application/ld+json">
@@ -110,15 +166,52 @@ if ('IntersectionObserver' in window) {
       <img class="hero-portrait" src="profile pic.jpg" alt="Portrait of Ying Tang" width="1365" height="2048">
     </section>
 
-    <section class="interests" id="interests" aria-labelledby="interests-title">
-      <div class="container section-grid">
-        <div class="section-label"><h2 id="interests-title">Research interests</h2></div>
-        <div class="reading-column">
-          <p class="lead">Inspired by Sartre’s idea that “Man is nothing else but that which he makes of himself,” I often reflect on who I am becoming through my choices and actions. As a researcher studying organizations, this curiosity leads me to consider when we see organizations as actors capable of pursuing purposes and acting on their own behalf, and how these perceptions shape the experiences and actions of people within and around them.</p>
-          <p>My research approaches these questions from two complementary perspectives. Drawing on organization theory, I examine how organizations come to be understood as social actors with identities, purposes, and capacities to act (organizational actorhood), and how these perceptions shape stakeholders’ judgments and responses. Drawing on organizational behavior and social psychology, I investigate when and how perceptions of an organization as a coherent, unified entity (organizational entitativity) enable or constrain individual agency, particularly among employees.</p>
-        </div>
-      </div>
-    </section>
+<section class="interests" id="interests" aria-labelledby="interests-title">
+  <div class="container section-grid">
+    <div class="section-label">
+      <h2 id="interests-title">Research interests</h2>
+    </div>
+
+    <div class="reading-column">
+      <p>
+        Inspired by Sartre’s idea that “Man is nothing else but that which
+        he makes of himself,” I often reflect on who I am becoming through
+        my <strong>choices and actions</strong>. As a researcher studying
+        organizations, this curiosity leads me to consider when we see
+        organizations as actors capable of pursuing purposes and acting
+        on their own behalf, and how these perceptions shape the experiences
+        and actions of people within and around them.
+      </p>
+
+      <p class="perspectives-intro">
+        My research approaches these questions from two complementary perspectives:
+      </p>
+
+      <ul class="research-perspectives">
+        <li>
+          <h3>Organization theory</h3>
+          <p>
+            I examine how organizations come to be understood as social actors
+            with identities, purposes, and capacities to act
+            (<strong>organizational actorhood</strong>), and how these
+            perceptions shape stakeholders’ judgments and responses.
+          </p>
+        </li>
+
+        <li>
+          <h3>Organizational behavior &amp; social psychology</h3>
+          <p>
+            I investigate when and how perceptions of an organization as
+            a coherent, unified entity
+            (<strong>organizational entitativity</strong>)
+            <strong>enable or constrain individual agency</strong>,
+            particularly among employees.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 
     <section class="research container section-space" id="research" aria-labelledby="research-title">
       <div class="section-heading"><h2 id="research-title">Research in progress</h2></div>
